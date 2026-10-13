@@ -32,6 +32,7 @@ async def enrich_profile(customer_data: dict) -> ToolOutput:
     return ToolOutput(result=result)
 
 
+
 @activity.defn
 async def send_notification(email: str, customer_name: str) -> ToolOutput:
     await mcp_manager.ensure_running()
